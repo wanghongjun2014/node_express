@@ -6,16 +6,20 @@ var router = express.Router();
 
 
 //挂载于页面的的二级路由
-router.use('/', function(req, res) {
-	// var data_base = data.get('users',function (err,data) {
-	// 	if(err) console.log(data);
-	// });
-	console.log(req.body);
+router.get('/', function (req, res) {
 	res.render('login', {
-		title: '首页',
-		age:23,
-		res: res
+		title: '登录中心',
 	});
+});
+
+router.post('/', function(req, res) {
+	var data_base = data.get(monk_conf.db_user_conf,function (err,data) {
+		if(err) console.log(data);
+	});
+	data_base.insert(req.body, function (err, doc) {
+	  if (err) throw err;
+	});
+	res.redirect('/');
 });
 
 module.exports = router;
