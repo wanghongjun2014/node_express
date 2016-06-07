@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var controller = require('./routes/controller_routes');
+var controllers = require('./controllers/controller');
 
 var app = express();
 
@@ -45,7 +45,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser('node-plafrom'));
 
 
-controller.forEach(function (item) {
+controllers.forEach(function (item) {
   app.use(item.url,require('./routes/'+item.controller));
 })
 
