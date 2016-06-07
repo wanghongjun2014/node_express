@@ -1,0 +1,16 @@
+{
+    "name" : "mobile_touch",
+
+    "jshint" : {
+        "src" : ["public/dist/js/*js"]
+    },
+
+    "csslint" : {
+        "src" : ["public/dist/cssbootstrap.css","public/stylesheets/**.css"]
+    },
+    "buildimage" : {
+        "src" : "public/images/**"
+    }
+}
+
+

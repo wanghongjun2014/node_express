@@ -21,6 +21,12 @@
     "ldapjs": "*",
     "monk":"*",
     "log4js":"*",
-    "async":"*"
+    "async":"*",
+    "gulp-util":"*",
+    "gulp-jshint":"*",
+    "gulp-csslint":"*",
+    "gulp-notify":"*",
+    "map-stream":"*",
+    "gulp-compass":"*"
   }
 }
