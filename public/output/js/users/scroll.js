@@ -37,7 +37,7 @@
 
 			timer = setInterval(function () {
 
-				if(_this.data.length){
+				if(_this.liveData.length){
 					_this.addItem();
 				}
 
@@ -142,10 +142,4 @@ start.addEventListener('click',function () {
 		dataUrl:'/user/data'
 	});
 })
-
-
-<p style="postion:relative;">
-	<img src="">
-	<a href="" style="postion:absolute;top:0;left:0;width:100%;height:100%;z-index:10;"></a>
-</p>
 
