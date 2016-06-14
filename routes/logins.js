@@ -13,12 +13,12 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function(req, res) {
-	var data_base = data.get(monk_conf.db_user_conf,function (err,data) {
-		if(err) console.log(data);
-	});
-	data_base.insert(req.body, function (err, doc) {
-	  if (err) throw err;
-	});
+	// var data_base = data.get(monk_conf.db_user_conf,function (err,data) {
+	// 	if(err) console.log(data);
+	// });
+	// data_base.insert(req.body, function (err, doc) {
+	//   if (err) throw err;
+	// });
 	res.redirect('/');
 });
 
